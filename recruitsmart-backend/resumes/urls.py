@@ -10,4 +10,5 @@ router.register(r'resumes', ResumeViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('resumes/job/<int:job_id>/', ResumeListByJobView.as_view(), name='resumes-by-job'),
+     path("jobs/<int:pk>/", JobDetailView.as_view(), name="job-detail"),
 ]
